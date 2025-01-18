@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@400;700&display=swap');  
+
+
+body{
+    background-color:#c51350;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+h1 {
+    font-family: "Sacramento", cursive;
+    font-size: 3rem;
+    color: #fff;
+    font-family: "Berkshire Swash", cursive;
+}
+form {
+    max-width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+form input {
+    border: 2px solid lightslategray;
+    height: 40px;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 1rem;
+}
+form input:focus {
+    outline: none;
+    border: 2px solid darkslategray;
+}
+
+@media screen and (max-width:700px){
+    h1{
+        font-size: 1rem;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        width: 200px;
+        margin: 0 auto;
+        border: 25px;
+    }
+}
