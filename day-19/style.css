@@ -3,23 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body{
-    height: 100vh;
-    background:red ;
-}
-.container{
-    background-color: #ffffff;
-    width: 60%;
-    padding: 30px;
-    min-width: 520px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border-radius: 5px;
-    transform: translate(-50%,-50%);
-    box-shadow: 0 15px 30px rgba(0, g0, 0, 0.3);
-} */
-
 .scoreboard {
     background-color: #1e1e21;
     width: min(90%, 34em);
