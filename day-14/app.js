@@ -1,4 +1,5 @@
-// function to generate and display number
+// function to generate and display number 
+// create for math function for random nuber 
 
 function generateRandomNumber () {
     let min = 1;
