@@ -5,6 +5,7 @@
 }
 body{
     background-color:#3F4F44 ;
+    display: flex;
 }
 .container{
     width: 21.87rem;
