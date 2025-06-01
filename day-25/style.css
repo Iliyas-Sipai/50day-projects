@@ -68,6 +68,7 @@ p span{
 }
 .error{
     background-color: red;
+    font-weight: 100;
     animation: pop 0.4s;
 }
 @keyframes pop{
