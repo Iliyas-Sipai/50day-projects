@@ -25,6 +25,7 @@ function strengthChecker(){
         span.classList.add("strength");
         strengthBar.appendChild(span);
     }
+    //Switch case for choose one condtion given the multiple cases
 
     let spanRef = document.getElementsByClassName("strength");
     for( let i = 0; i < spanRef.length; i++){
