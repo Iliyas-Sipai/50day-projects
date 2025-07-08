@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:  #F7AD45;
+    /* background:linear-gradient(#657C6A 50%,
+    #F7AD45 50%); */
+}
+.container{
+    width: 28em;
+    background-color: #ffffff;
+    padding: 8em 2em;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.8em;
+    box-shadow:0 45px 60px rgba(38, 22, 1, 0.1) ;
+}

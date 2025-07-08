@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mate:ital@0;1&family=Noto+Sans:wght@100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Pacifico&family=Roboto:wght@500&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+    box-sizing: border-box;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f2f5;
+    padding: 0 15px;
+}
+.fb-page{
+   display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+.fb-page h1{
+    font-size: 4rem;
+    color: #1877f2;
+    margin-bottom: 15px;
+}
+.fb-page p{
+  font-size: 1.78rem;
+}
+.fb-page .text{
+    margin-bottom: 90px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    background: #ffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.1)
+                0 8px 16px rgba(0, 0, 0, 0.1) ;
+                        
+}
+form input{
+    height: 55px;
+    width: 100%;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+form input:focus{
+    outline: none;
+    border-color: #1877f2;
+}
+::placeholder{
+    color:#777;
+    font-size: 1.063rem;
+}
+.login-link{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+.login-link .login-btn{
+    padding: 15px 0;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #1877f2;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+.login-link .login-btn:hover{
+   background: #0d65d9;
+}
+form a{ 
+    text-decoration: none;
+
+}
+.login-link .forgot{
+    color: #1877f2;
+    font-size: 0.875rem;
+}
+.login-link .forgot:hover{
+    text-decoration: underline  ;
+}
+hr{
+    border: none;
+    height: 1px;
+    background: #ccc;
+    margin-top: 20px;
+}
+.account{
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.account a{
+    padding: 15px 20px;
+    background: #42b72a;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.063rem;
+    font-weight: 600;
+}
+.account a:hover{
+    background: #3ba626;
+}
+@media (max-width:900px) {
+    .fb-page{
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .fb-page .text{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:460px) {
+   .fb-page h1{
+    font-size: 3.5rem;
+   }
+   .fb-page p {
+    font-size: 1.3rem;
+   }
+   form{
+    padding: 15px;
+   }
+}
