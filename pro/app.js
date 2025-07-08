@@ -1,77 +1,54 @@
-let draggableElem = document.getElementById("draggable-elem");
-let initialX = 0,
-initialY = 0;
-let moveElemnt = false;
+  let editId = null;
 
-//Event Object
+  const saveTask = () => {
+    const task = document.getElementById("taskName").value.trim();
+    if (!task) return alert("Please enter a task");
 
-let events = {
-    mouse : {
-        down:"mousedown",
-        move : "mousedown",
-        up:"mouseup",
-    },
-    touch:{
-        down:"touchstrat",
-        move:"touchmove",
-        up:"touchend",
-    },
-};
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-let deviceType = "";
-// Detec touch device
-
-const isTouchDevice = () => {
-    try{
-        //we try to craete TouchEvent (it would fail des)
-        // destops and throw error/
-
-        document.createEvent("TouchEvent");
-        deviceType = "touch";
-        return true;  
+    if (editId !== null) {
+      tasks[editId] = { task };
+      editId = null;
+    } else {
+      tasks.push({ task });
     }
-    catch(e){
-        deviceType = "mouse";
-        return false;
-    }
-};
 
-isTouchDevice();
-// console.log(isTouchDevice());
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    showTasks();
+    clearInput();
+  };
 
-// startr (mouse)
-draggableElem.addEventListener(events[deviceType].down,(e) => {
-  e.preventDefault();
-  //initial x and  y point
-  initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX
-  initialY = !isTouchDevice() ? e.clientY :  e.touches[0].clientY
+  const showTasks = () => {
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const taskData = document.getElementById("taskData");
+    taskData.innerHTML = "";
 
-  moveElemnt = true;
-});
-// move
+    tasks.forEach((t, index) => {
+      taskData.innerHTML += `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${t.task}</td>
+          <td>
+            <button onclick="editTask(${index})">✏️ Edit</button>
+            <button onclick="deleteTask(${index})">🗑️ Delete</button>
+          </td>
+        </tr>`;
+    });
+  };
 
-draggableElem.addEventListener(events[deviceType].move,(e) => {
-    if(moveElemnt){
-        e.preventDefault();
-        let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-        let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+  const deleteTask = (index) => {
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks.splice(index, 1);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    showTasks();
+  };
 
-        draggableElem.style.top = draggableElem.offsetTop - (initialY - newY) + "px"
-        draggableElem.style.left = draggableElem.offsetLeft - (initialX - newX) +"px"
-        initialX = newX;
-        initialY = newY
-    }
-});
+  const editTask = (index) => {
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    document.getElementById("taskName").value = tasks[index].task;
+    editId = index;
+  };
 
-// mouse up touch end
-draggableElem.addEventListener(
-    events[deviceType].up,
-    (stopMovement = (e) => {
-        moveElemnt = false;
-    })
-)
-draggableElem.addEventListener("mouseleave",stopMovement);
-draggableElem.addEventListener(events[deviceType].up,(e) =>
-{
-    moveElemnt = false
-})
+  const clearInput = () => {
+    document.getElementById("taskName").value = "";
+  };
