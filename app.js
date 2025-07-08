@@ -1,4 +1,3 @@
-//  window.onload = showTasks;
   let editId = null;
 
   const saveTask = () => {
