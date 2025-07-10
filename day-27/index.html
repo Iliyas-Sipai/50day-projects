@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section class="gallery-section">
+       <div class="container">
+           <h1 class="title">Image Gallery</h1>
+           <div class="controls">
+              <input type="text" id="searchBox" placeholder="Search images...">
+              <div class="filter-buttons">
+              <div class="filter-buttons">
+                 <button class="filter-btn" data-filter="all">All</button>
+                 <button class="filter-btn" data-filter="nature">Nature</button>
+                 <button class="filter-btn" data-filter="architecture">Architecture</button>
+                 <button class="filter-btn" data-filter="people">People</button>
+              </div>
+              </div>
+              <div class="gallery" id="gallery">
+                  <div class="gallery-items nature" data-category="nature" data-title="Nature Image 1"><img src="https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?_gl=1*1mlk1ux*_ga*MTcyMTI4MTc2MC4xNzIxNDc3MDM4*_ga_8JE65Q40S6*czE3NTIxMjc1MDMkbzgwJGcxJHQxNzUyMTI4NjQyJGoxMCRsMCRoMA.." alt="Nature Image 1"> <p>Nature</p></div>
+                  <div class="gallery-items architecture" data-category="architecture" data-title="Architecture Image 1"><img src="https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?_gl=1*11mqnmo*_ga*MTcyMTI4MTc2MC4xNzIxNDc3MDM4*_ga_8JE65Q40S6*czE3NTIxMjc1MDMkbzgwJGcxJHQxNzUyMTI3OTQwJGo0MSRsMCRoMA.." alt="Architecture Image 1"><p>Architecture</p></div>
+                  <div class="gallery-items people" data-category="people" data-title="People Image 1"><img src="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?_gl=1*13r8ojp*_ga*MTcyMTI4MTc2MC4xNzIxNDc3MDM4*_ga_8JE65Q40S6*czE3NTIxMjc1MDMkbzgwJGcxJHQxNzUyMTI3NTcyJGo2MCRsMCRoMA.." alt="People Image 1"><p>People</p></div>
+                  <div class="gallery-items nature" data-category="nature" data-title="Nature Image 2"><img src="https://images.pexels.com/photos/212324/pexels-photo-212324.jpeg?_gl=1*7ude4n*_ga*MTcyMTI4MTc2MC4xNzIxNDc3MDM4*_ga_8JE65Q40S6*czE3NTIxMjc1MDMkbzgwJGcxJHQxNzUyMTI4NTkyJGo2MCRsMCRoMA.." alt="Nature Image 2"><p>Nature</p></div>
+                  <div class="gallery-items architecture" data-category="architecture" data-title="Architecture Image 2"><img src="https://images.pexels.com/photos/162031/dubai-tower-arab-khalifa-162031.jpeg?_gl=1*1uxe5zk*_ga*MTcyMTI4MTc2MC4xNzIxNDc3MDM4*_ga_8JE65Q40S6*czE3NTIxMjc1MDMkbzgwJGcxJHQxNzUyMTI3OTk2JGo2MCRsMCRoMA.." alt="Architecture Image 2"><p>Architecture</p></div>
+                  <div class="gallery-items people" data-category="people" data-title="People Image 2"><img src="https://images.pexels.com/photos/1472334/pexels-photo-1472334.jpeg?_gl=1*crqpjp*_ga*MTcyMTI4MTc2MC4xNzIxNDc3MDM4*_ga_8JE65Q40S6*czE3NTIxMjc1MDMkbzgwJGcxJHQxNzUyMTI3NzY1JGo0NSRsMCRoMA.." alt="People Image 2"><p>People</p></div>
+           </div>
+       </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
