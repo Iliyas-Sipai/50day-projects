@@ -1,0 +1,34 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #eaf6f6;
+  margin-top: 100px;
+}
+body{
+    background-color:#66bfbf;
+}
+h2 {
+  text-align: center;
+}
+
+.range-input {
+  margin-bottom: 20px;
+}
+
+.range-input label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.range-input input[type="range"] {
+  width: 100%;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
